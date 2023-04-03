@@ -1,9 +1,8 @@
-package tests;
+package test;
 
 import br.ce.wcaquino.taskbackend.utils.DateUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.*;
 
 import java.time.LocalDate;
 

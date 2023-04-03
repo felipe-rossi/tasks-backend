@@ -1,4 +1,4 @@
-package tests;
+package test;
 
 import br.ce.wcaquino.taskbackend.controller.TaskController;
 import br.ce.wcaquino.taskbackend.model.Task;
@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.time.LocalDate;
