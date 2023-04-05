@@ -1,5 +1,3 @@
-package test;
-
 import br.ce.wcaquino.taskbackend.controller.TaskController;
 import br.ce.wcaquino.taskbackend.model.Task;
 import br.ce.wcaquino.taskbackend.repo.TaskRepo;
@@ -15,18 +13,11 @@ import java.time.LocalDate;
 
 public class TaskControllerTest {
 
-    @Mock
     private TaskRepo taskRepo;
 
-    @InjectMocks
-    private TaskController controller;
+     TaskController controller = new TaskController();
 
-
-    @Before
-    public void setUp(){
-        MockitoAnnotations.initMocks(this);
-    }
-
+     
     @Test
     public void naoDeveSalvarTarefaSemDescricao()  {
         Task todo = new Task();
