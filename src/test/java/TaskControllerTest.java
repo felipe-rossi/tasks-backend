@@ -2,7 +2,6 @@ import br.ce.wcaquino.taskbackend.controller.TaskController;
 import br.ce.wcaquino.taskbackend.model.Task;
 import br.ce.wcaquino.taskbackend.repo.TaskRepo;
 import br.ce.wcaquino.taskbackend.utils.ValidationException;
-import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
