@@ -4,18 +4,26 @@ import br.ce.wcaquino.taskbackend.repo.TaskRepo;
 import br.ce.wcaquino.taskbackend.utils.ValidationException;
 import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.time.LocalDate;
 
 public class TaskControllerTest {
-
+    @Mock
     private TaskRepo taskRepo;
 
+     @InjectMocks
      TaskController controller = new TaskController();
+
+     @BeforeEach
+     public void setUp(){
+         MockitoAnnotations.initMocks(this);
+     }
 
 
     @Test
@@ -60,13 +68,14 @@ public class TaskControllerTest {
         }
     }
 
-   /* @Test
+   @Test
     public void salvarComSucessoUmaTarefa() throws ValidationException {
         Task todo = new Task();
+        todo.setId((long) 1);
         todo.setTask("teste");
         todo.setDueDate(LocalDate.now());
         controller.save(todo);
 
         Mockito.verify(taskRepo).save(todo);
-    }*/
+    }
 }
