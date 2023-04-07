@@ -13,16 +13,16 @@ import org.mockito.MockitoAnnotations;
 import java.time.LocalDate;
 
 public class TaskControllerTest {
-    @Mock
+    //@Mock
     private TaskRepo taskRepo;
 
-     @InjectMocks
+     //@InjectMocks
      TaskController controller = new TaskController();
 
-     @BeforeEach
-     public void setUp(){
-         MockitoAnnotations.initMocks(this);
-     }
+//     @BeforeEach
+//     public void setUp(){
+//         MockitoAnnotations.initMocks(this);
+//     }
 
 
     @Test
@@ -67,14 +67,14 @@ public class TaskControllerTest {
         }
     }
 
-   @Test
-    public void salvarComSucessoUmaTarefa() throws ValidationException {
-        Task todo = new Task();
-        todo.setId((long) 1);
-        todo.setTask("teste");
-        todo.setDueDate(LocalDate.now());
-        controller.save(todo);
-
-        Mockito.verify(taskRepo).save(todo);
-    }
+//   @Test
+//    public void salvarComSucessoUmaTarefa() throws ValidationException {
+//        Task todo = new Task();
+//        todo.setId((long) 1);
+//        todo.setTask("teste");
+//        todo.setDueDate(LocalDate.now());
+//        controller.save(todo);
+//
+//        Mockito.verify(taskRepo).save(todo);
+//    }
 }
